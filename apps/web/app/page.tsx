@@ -35,7 +35,7 @@ const Gradient = ({
 const LinksSection = async () => {
   const fetchLinks = async (): Promise<Link[]> => {
     try {
-      return await (await fetch('http://localhost:3000/links')).json();
+      return await (await fetch('http://localhost:5005/links')).json();
     } catch (_) {
       return [];
     }

@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-> 🏁 This app depends on the [apps/api](../api/README.md) server. make sure your server is running at the port `3000`
+> 🏁 This app depends on the [apps/api](../api/README.md) server. make sure your server is running at the port `5005`
 
 Run the development server:
 
@@ -10,11 +10,11 @@ Run the development server:
 pnpm run dev
 ```
 
-Open [localhost:3001](http://localhost:3001) with your browser to see the result.
+Open [localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-To create [API routes](https://nextjs.org/docs/app/building-your-application/routing/router-handlers) add an `api/` directory to the `app/` directory with a `route.ts` file. For individual endpoints, create a subfolder in the `api` directory, as `api/hello/route.ts` would map to [http://localhost:3000/api/hello](http://localhost:3000/api/hello).
+To create [API routes](https://nextjs.org/docs/app/building-your-application/routing/router-handlers) add an `api/` directory to the `app/` directory with a `route.ts` file. For individual endpoints, create a subfolder in the `api` directory, as `api/hello/route.ts` would map to [http://localhost:5005/api/hello](http://localhost:5005/api/hello).
 
 ### ⚠️ Note about build
 
