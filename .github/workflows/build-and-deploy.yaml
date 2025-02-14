@@ -31,13 +31,14 @@
         - name: Install Dependencies
           run: |
             node --version
-            npm add -g turbo
+            npm add -g pnpm
+            pnpm add -g turbo
             turbo prune web
-            npm install
+            pnpm install
             
   
         - name: Build Static Website
-          run: npm run build
+          run: pnpm run build
   
         - name: Copy files to the production website with the AWS CLI
           run: |
