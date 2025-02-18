@@ -1,5 +1,3 @@
-version: "1"
-
 services:
   # Instead of Docker, will deploy static files to S3
   # web:
