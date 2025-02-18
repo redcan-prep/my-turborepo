@@ -1,7 +1,9 @@
-FROM public.ecr.aws/lambda/nodejs:20 as base
+FROM node:20-slim as base
+COPY --from=public.ecr.aws/awsguru/aws-lambda-adapter:0.9.0 /lambda-adapter /opt/extensions/lambda-adapter
 
 ENV PNPM_HOME="/var/lib/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
+ENV AWS_LWA_PORT=5005
 
 RUN npm install -g corepack@latest
 RUN corepack enable
@@ -28,4 +30,4 @@ WORKDIR /app
 
 COPY --from=installer /app ${LAMBDA_TASK_ROOT}
 
-CMD ["apps/api/dist/src/main.handler"]
+CMD ["node",  "apps/api/dist/src/main.js"]

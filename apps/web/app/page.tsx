@@ -36,7 +36,7 @@ const LinksSection = async () => {
   console.log("LinksSection");
   const fetchLinks = async (): Promise<Link[]> => {
     try {
-      return await (await fetch('http://3.144.117.206:5005/links')).json();
+      return await (await fetch('https://dekiqdec30.execute-api.us-east-2.amazonaws.com/dev/links')).json();
     } catch (_) {
       return [];
     }
