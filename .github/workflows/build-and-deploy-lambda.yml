@@ -35,13 +35,3 @@ jobs:
             docker compose -f docker-compose.yml build api
             docker tag my-turborepo-api:latest $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
             docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-
-        - name: Upade Lambda function with the docker image uri
-          env:
-            ECR_REGISTRY: ${{ steps.login-pf-aws-ecr.outputs.registry }}
-            ECR_REPOSITORY: ${{secrets.AWS_ECR_REPO}}
-            IMAGE_TAG: latest
-          run: |
-            aws lambda update-function-code \
-              --function-name my-turborepo \
-              --image-uri $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
