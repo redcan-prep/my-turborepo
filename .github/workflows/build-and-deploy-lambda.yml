@@ -1,4 +1,4 @@
-name: Build and Deploy NestJS App to ECR: 
+name: Build and Deploy NestJS App to ECR
   push: 
     branches: [main]
   
