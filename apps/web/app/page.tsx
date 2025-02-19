@@ -37,7 +37,7 @@ const LinksSection = async () => {
     try {
       return await (
         await fetch(
-          'https://dekiqdec30.execute-api.us-east-2.amazonaws.com/dev/links',
+          'https://dekiqdec30.execute-api.us-east-2.amazonaws.com/dev/links?_=' + Date.now(),
         )
       ).json();
     } catch (_) {

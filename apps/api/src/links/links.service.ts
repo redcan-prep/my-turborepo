@@ -10,27 +10,27 @@ export class LinksService {
   private readonly _links: Link[] = [
     {
       id: 0,
-      title: 'Docs v3',
+      title: 'Docs v4',
       url: 'https://turbo.build/repo/docs',
       description:
         'Find in-depth information about Turborepo features and API.',
     },
     {
       id: 1,
-      title: 'Learn v3',
+      title: 'Learn v4',
       url: 'https://turbo.build/repo/docs/handbook',
       description: 'Learn more about monorepos with our handbook.',
     },
     {
       id: 2,
-      title: 'Templates v3',
+      title: 'Templates v4',
       url: 'https://turbo.build/repo/docs/getting-started/from-example',
       description:
         'Choose from over 15 examples and deploy with a single click.',
     },
     {
       id: 3,
-      title: 'Deploy v3',
+      title: 'Deploy v4',
       url: 'https://vercel.com/new',
       description:
         'Instantly deploy your Turborepo to a shareable URL with Vercel.',
